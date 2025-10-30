@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Quiz App</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="title">Quiz Time 🎯</h1>
+      <p class="subtitle">One question at a time — test your knowledge</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Question Card -->
+    <section class="card question-card" aria-labelledby="question-title">
+  <div class="question-header">
+    <h2 id="question-title">Question 1 of 4</h2>
+    <!-- Optional progress bar -->
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+
+  <p class="question-text">Which language runs in a web browser?</p>
+
+  <ul class="options" role="list">
+    <li><button class="option" type="button">Java</button></li>
+    <li><button class="option" type="button">C</button></li>
+    <li><button class="option" type="button">Python</button></li>
+    <li><button class="option" type="button">JavaScript</button></li>
+  </ul>
+
+  <div class="controls">
+    <button class="btn btn-primary" id="nextBtn" disabled>Next</button>
+  </div>
+</section>
+
+<!-- Result Card -->
+<section class="card result-card hidden" id="result" aria-hidden="true">
+  <h2>Your Score</h2>
+  <p id="scoreText">You scored 0 / 4</p>
+  <div class="controls">
+    <button class="btn btn-primary" id="restartBtn">Retake Quiz</button>
+  </div>
+</section>
+</main>
+
+  <footer class="footer">
+    <small>Interactive Quiz App</small>
+  </footer>
+</body>
+</html>
